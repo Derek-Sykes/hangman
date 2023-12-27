@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hangman</title>
+</head>
+<body>
+    <form action="/" method="get">
+        <input type="submit" value="Play Again" id="playAgain">
+    </form>
+    <h1 class="center">Welcome to Hangman!</h1>
+    <div>
+        <h5 id="feedback">Press START to begin guessing</h5>
+        <div class="center">
+            <button type="button" id="start">start</button>
+        </div>
+    </div>
+
+    <div class="center" id="game-div">
+        <div id="sideBySide">
+            <p id="hint">Hint: </p>
+            <button type="button" id="revealHint" onclick="RevealHint()">Reveal</button>
+        </div>
+        
+        
+        <div id="canvas">
+            <canvas id="canvas1"></canvas>
+        </div>
+        <p id="category">Category: </p>
+        <div class="guess">
+            <label for="guess">Make a Guess: </label>
+            <input type="text" name="guess" id="guess" autofocus>
+            <button id="guess-btn" onclick="MakeGuess()">Guess</button>
+        </div>
+        <div class="guesses">
+            <h3 id="guessSpace">Guess Space: </h3>
+            <h3 id="wrongGuesses">Wrong Guesses: </h3>
+        </div>
+        
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <script src="controller.js"></script>
+</body>
+</html>

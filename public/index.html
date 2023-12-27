@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+</head>
+<body>
+    <h1 class="center">Hangman</h1>
+    <div id="side">
+        <form id="2pf" hidden onsubmit="redirectToHangman(); return false;">
+            <label for="answer">Answer: </label>
+            <input type="text" name="answer" id="answer" autofocus required>
+    
+            <label for="category">Category: </label>
+            <input type="text" name="category" id="category">
+    
+            <label for="hint">Hint: </label>
+            <input type="text" name="hint" id="hint">
+            
+            <input type="submit" value="GO">
+        </form>
+    
+        
+    </div>
+    <div id="som">
+        <button id="singlePlayer" onclick="singlePlayer()">Single Player</button>
+        <button onclick="Reveal2Player()" id="player2">2 Player</button>
+    </div>
+    <button id="back" onclick="back()" hidden><img width="30px" height="30px" src="elements/back_arrow.png" alt="Back"></button>
+        
+    <script src="listCreator.js"></script>
+    <script src="controller.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+</body>
+</html>
